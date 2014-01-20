@@ -28,6 +28,14 @@ exports.report = function report(name) {
 		return _.map(comments.ymls(name), function (d) {
 			return _.extend({}, defaults, d);
 		});
+
+	} else if (type === 'method') {
+
+		var args = Array.prototype.slice.call(arguments);
+		args.shift();
+
+		return this[name].apply(this, args);
+
 	}
 };
 

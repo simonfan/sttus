@@ -26,6 +26,14 @@ var sttus = module.exports = jsfile.extend({
 			defaults: {
 				etc: 0
 			}
+		},
+
+		etc: {
+			type: 'method'
+		},
+
+		etcModule: {
+			type: 'method'
 		}
 	}
 });
