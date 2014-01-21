@@ -1,3 +1,9 @@
+/**
+ * Logic for Estimated Time for Completion (ETC/etc)
+ *
+ * @module sttus
+ * @submodule etc
+ */
 'use strict';
 
 var _ = require('lodash');
@@ -20,6 +26,11 @@ exports.etc = function etc() {
 	return todosEtc >= statusEtc ? todosEtc : statusEtc;
 };
 
+/**
+ * Returns the total etc, summing up the dependencies etc.
+ *
+ * @method etcModule
+ */
 exports.etcModule = function etcModule() {
 
 	var thisEtc = this.etc();

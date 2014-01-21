@@ -24,7 +24,7 @@ describe('status report', function () {
 	})
 
 	it('reportModule(name)', function () {
-		var rm = this.status.reportModule(/*'status' not needed */);
+		var rm = this.status.reportModule('status');
 
 		rm.should.eql({
 			'sub.js': {
